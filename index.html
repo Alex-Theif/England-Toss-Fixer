@@ -31,8 +31,8 @@ src="https://www.facebook.com/tr?id=1240745560821211&ev=PageView&noscript=1"
         <div class="headcontainer">
             <h3 class="headfirst">💥ENGLAND TOSS FIXER™💥</h3>
             <h5>✅100% Accuracy Milega Yaha✅</h5>
-            <h1 class="time">30</h1>
-            <span class="txt">Second Left</span> 
+<!--             <h1 class="time">30</h1>
+            <span class="txt">Second Left</span>  -->
            <div class="photo">
             <img src="logo.JPG" alt="">
            </div>
@@ -41,11 +41,29 @@ src="https://www.facebook.com/tr?id=1240745560821211&ev=PageView&noscript=1"
            <h4 class="lasthead">⚡63/64 World Cup Toss Pass⚡</h4>
            <h4 class="lasthead">⚡59/61 Big Bash League Toss Pass⚡</h4>
            
-           <a href="https://t.me/+K2joomvQ4r1jMTg9"><button class="btn" id="blinking-button">JOIN THE CHANNEL NOW</button></a>
+          <button class="btn" id="blinking-button">JOIN THE CHANNEL NOW</button>
         </div>
     </div>
 
+         <script>
+  document.getElementById('blinking-button').addEventListener('click', function() {
+    // Generate unique event ID using timestamp + random number
+    var eventID = 'subscribe_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
 
+    // Track with Meta Pixel and include eventID
+    fbq('track', 'Subscribe', {}, { eventID: eventID });
+
+    // Optional: log it for debugging
+    // console.log("Meta Subscribe Event ID:", eventID);
+
+    // Delay redirect to give Meta time
+    setTimeout(function() {
+      window.location.href = "https://t.me/+K2joomvQ4r1jMTg9";
+    }, 200);
+  });
+</script>
+
+    
 <!--     <script>
         var timer = document.querySelector('.time');
         var bt = document.querySelector('.btn')
